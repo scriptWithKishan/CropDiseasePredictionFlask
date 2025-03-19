@@ -98,6 +98,6 @@ def predict():
             os.remove(filepath)
             app.logger.info(f"Removed temporary file: {filepath}")
 
-if __name__ != "__main__":
-    gunicorn_app = app
+if __name__ == "__main__":
+    app.run(debug=True)
 
